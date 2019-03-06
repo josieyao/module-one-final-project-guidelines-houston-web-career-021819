@@ -2,6 +2,8 @@ Senior.destroy_all
 Hobby.destroy_all
 Friend.destroy_all
 Match.destroy_all
+Seniorhobby.destroy_all
+Friendhobby.destroy_all
 
 willa_mae = Senior.create(name: "Willa Mae", dob: Date.new(1954,4,3), email: "wm1954@oldmail.com", password: "cutelady")
 bertha_jerkins = Senior.create(name: "Bertha Jenkins", dob: Date.new(1959,9,21), email: "bj59@oldmail.com", password: "bombgma")
@@ -15,3 +17,9 @@ reading = Hobby.create(hobby: "Reading")
 
 m1 = Match.create(senior_id: willa_mae.id, hobby_id: knitting.id, friend_id:rc.id)
 m2 = Match.create(senior_id: bertha_jerkins.id, hobby_id: reading.id,friend_id:jd.id)
+
+w1 = Seniorhobby.create(senior_id: willa_mae.id, hobby_id: knitting.id)
+b1 = Seniorhobby.create(senior_id: bertha_jerkins.id, hobby_id: reading.id)
+
+rc1 = Friendhobby.create(friend_id: rc.id, hobby_id: knitting.id)
+jd1 = Friendhobby.create(friend_id: jd.id, hobby_id: reading.id)

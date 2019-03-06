@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190306153829) do
+ActiveRecord::Schema.define(version: 20190306191245) do
+
+  create_table "friendhobbies", force: :cascade do |t|
+    t.integer "friend_id"
+    t.integer "hobby_id"
+    t.index ["friend_id"], name: "index_friendhobbies_on_friend_id"
+    t.index ["hobby_id"], name: "index_friendhobbies_on_hobby_id"
+  end
 
   create_table "friends", force: :cascade do |t|
     t.string "name"
@@ -30,6 +37,13 @@ ActiveRecord::Schema.define(version: 20190306153829) do
     t.index ["friend_id"], name: "index_matches_on_friend_id"
     t.index ["hobby_id"], name: "index_matches_on_hobby_id"
     t.index ["senior_id"], name: "index_matches_on_senior_id"
+  end
+
+  create_table "seniorhobbies", force: :cascade do |t|
+    t.integer "senior_id"
+    t.integer "hobby_id"
+    t.index ["hobby_id"], name: "index_seniorhobbies_on_hobby_id"
+    t.index ["senior_id"], name: "index_seniorhobbies_on_senior_id"
   end
 
   create_table "seniors", force: :cascade do |t|
