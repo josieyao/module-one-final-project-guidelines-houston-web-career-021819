@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(version: 20190306153829) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "senior_id"
+    t.integer "friend_id"
     t.integer "hobby_id"
+    t.index ["friend_id"], name: "index_matches_on_friend_id"
     t.index ["hobby_id"], name: "index_matches_on_hobby_id"
-    t.index ["user_id"], name: "index_matches_on_user_id"
+    t.index ["senior_id"], name: "index_matches_on_senior_id"
   end
 
   create_table "seniors", force: :cascade do |t|
