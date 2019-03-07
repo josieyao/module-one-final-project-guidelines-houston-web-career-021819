@@ -18,8 +18,8 @@ def create_senior_account
     now = Time.now.utc.to_date
     age = now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
 
-  Senior.create(name: name, email: email, password: password, dob: dob)
-  
+  current_senior = Senior.create(name: name, email: email, password: password, dob: dob)
+  senior_select_hobbies(current_senior)
  end
 
 
