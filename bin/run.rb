@@ -1,3 +1,3 @@
 require_relative '../config/environment'
 $prompt = TTY::Prompt.new
-login()
+select_hobbies()
