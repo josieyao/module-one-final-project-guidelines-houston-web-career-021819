@@ -13,8 +13,10 @@ def senior_find_matches(current_senior)
 
     friendhobby_match_arr.each { |x| Match.create(friend_id: x.friend_id, senior_id: current_senior.id, hobby_id: x.hobby_id)}
 
-    friendhobby_match_arr.each { |friend| puts Friend.find(friend.friend_id).name }
+    matched_friend = friendhobby_match_arr.map { | match | match.friend }.uniq
+
+    matched_friend.each { |friend| puts friend.name }
 
     press_any_key
-    f_existing_user_login(current_senior)
+    s_existing_user_login(current_senior)
 end
