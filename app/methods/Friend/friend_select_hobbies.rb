@@ -1,8 +1,11 @@
 def friend_select_hobbies(current_friend)
     puts "\e[H\e[2J"
 
-    choices = %w(Art Sports Cars Gardening Traveling Food Hiking Writing Reading Cooking DIY Dancing Music Movies Chess Yoga Knitting)
-    hobbies = $prompt.multi_select("Please select multiple hobbies you enjoy.", choices)
+   hobbies = $prompt.multi_select("What are your hobbies?") do |menu|
+        Hobby.all.each do |hobby|
+        menu.choice hobby.hobby
+        end
+    end
 
     hobbies.each do |hobby|
         hobby = Hobby.find_by(hobby: hobby)
