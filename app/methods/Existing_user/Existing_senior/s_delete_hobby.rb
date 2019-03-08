@@ -3,7 +3,7 @@ def s_delete_hobby(current_senior)
     
     seniors = Seniorhobby.where( senior_id: current_senior.id )
 
-    #friend_id, hobby_id
+    #senior_id, hobby_id
 
     hobby_ids = seniors.map {|senior| senior.hobby_id }
 
@@ -26,5 +26,5 @@ def s_delete_hobby(current_senior)
     delete_now = Seniorhobby.destroy(delete_this_hobby.id)
 
     press_any_key
-    f_existing_user_login(current_senior)
+    s_existing_user_login(current_senior)
 end
