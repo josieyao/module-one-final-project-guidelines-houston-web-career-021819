@@ -14,4 +14,7 @@ def friend_find_matches(current_friend)
     seniorhobby_match_arr.each { |x| Match.create(senior_id: x.senior_id, friend_id: current_friend.id, hobby_id: x.hobby_id)}
 
     seniorhobby_match_arr.each { |senior| puts Senior.find(senior.senior_id).name }
+
+    press_any_key
+    f_existing_user_login(current_friend)
 end
