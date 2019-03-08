@@ -11,5 +11,6 @@ def friend_select_hobbies(current_friend)
         hobby = Hobby.find_by(hobby: hobby)
         Friendhobby.create(friend_id: current_friend.id, hobby_id: hobby.id)
     end
+
     friend_find_matches(current_friend)
 end

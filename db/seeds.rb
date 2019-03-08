@@ -8,7 +8,7 @@ Friendhobby.destroy_all
 willa_mae = Senior.create(name: "Willa Mae", dob: Date.new(1954,4,3), email: "wm1954@oldmail.com", password: "cutelady")
 bertha_jerkins = Senior.create(name: "Bertha Jenkins", dob: Date.new(1959,9,21), email: "bj59@oldmail.com", password: "bombgma")
 
-rc = Friend.create(name:"Robert Carr", dob: Date.new(1988,11,14),email:"rccola@gotmail.com", password:"cooldud3")
+rc = Friend.create(name:"Robert Carr", dob: Date.new(1988,11,14),email:"rc@rc.com", password:"rc")
 jd = Friend.create(name:"Jane Doe", dob: Date.new(1988,11,13),email:"jd@gotmail.com", password:"datfaced0e")
 
 

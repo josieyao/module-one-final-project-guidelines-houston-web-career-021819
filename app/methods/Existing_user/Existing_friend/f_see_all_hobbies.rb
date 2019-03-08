@@ -6,4 +6,6 @@ def f_see_all_hobbies(current_friend)
         friendhobby.friend_id == current_friend.id
     end   
     puts all_hobbies
+    f_delete_hobby(current_friend)
 end
+

@@ -14,11 +14,11 @@ end
 case s_or_f
     when 1
         current_friend = Friend.find_by(email: email, password: password)  
-        puts "Welcome back, #{current_friend.name}!"  
+        puts "Welcome back, #{current_friend.name}! What would you like to do today?"  
         f_see_all_hobbies(current_friend)
     when 2
         current_senior = Senior.find_by(email: email, password: password)
-        puts "Welcome back, #{current_senior.name}!" 
+        puts "Welcome back, #{current_senior.name}! What would you like to do today?" 
         s_see_all_hobbies(current_senior)
     end
 end
