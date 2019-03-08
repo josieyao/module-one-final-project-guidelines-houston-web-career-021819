@@ -5,7 +5,9 @@ def senior_select_hobbies(current_senior)
     hobbies = $prompt.multi_select("Please select multiple hobbies you enjoy.", choices)
 
     hobbies.each do |hobby|
-        hobby = Hobby.find_by(hobby: hobby)
-        Seniorhobby.create(senior_id: current_senior.id, hobby_id: hobby.id)
+       hobby = Hobby.find_by(hobby: hobby)
+       Seniorhobby.create(senior_id: current_senior.id, hobby_id: hobby.id)
     end
+    
+    friend_find_matches(current_senior)
 end

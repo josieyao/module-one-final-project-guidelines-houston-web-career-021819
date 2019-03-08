@@ -19,5 +19,6 @@ def create_friend_account
     age = now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
 
   current_friend = Friend.create(name: name, email: email, password: password, dob: dob)
+  
   friend_select_hobbies(current_friend)
 end
