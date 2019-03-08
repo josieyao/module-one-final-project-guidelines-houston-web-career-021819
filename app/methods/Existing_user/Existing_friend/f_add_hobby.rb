@@ -10,4 +10,7 @@ def f_add_hobby(current_friend)
     hobby_obj = Hobby.find_by(hobby: selected_hobby_to_add)
 
     add_new_hobby = Friendhobby.create(friend_id: current_friend.id, hobby_id: hobby_obj.id)
+
+    press_any_key
+    f_existing_user_login(current_friend)
 end

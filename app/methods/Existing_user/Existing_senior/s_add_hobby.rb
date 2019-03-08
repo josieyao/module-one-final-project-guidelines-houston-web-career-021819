@@ -10,4 +10,7 @@ def s_add_hobby(current_senior)
     hobby_obj = Hobby.find_by(hobby: selected_hobby_to_add)
 
     add_new_hobby = Seniorhobby.create(senior_id: current_senior.id, hobby_id: hobby_obj.id)
+
+    press_any_key
+    s_existing_user_login(current_senior)
 end

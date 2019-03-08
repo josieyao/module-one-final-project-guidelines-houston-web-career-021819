@@ -12,5 +12,5 @@ def senior_select_hobbies(current_senior)
        Seniorhobby.create(senior_id: current_senior.id, hobby_id: hobby.id)
     end
 
-    friend_find_matches(current_senior)
+    senior_find_matches(current_senior)
 end

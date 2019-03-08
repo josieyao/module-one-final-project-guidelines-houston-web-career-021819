@@ -13,4 +13,6 @@ def f_delete_hobby(current_friend)
 
     delete_new_hobby = Friendhobby.destroy(delete_this_hobby.id)
 
+    press_any_key
+    f_existing_user_login(current_friend)
 end

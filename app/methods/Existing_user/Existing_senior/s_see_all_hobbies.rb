@@ -23,5 +23,6 @@ def s_see_all_hobbies(current_senior)
         puts hobby.hobby
     end
 
-    s_delete_hobby(current_senior)
+    press_any_key
+    s_existing_user_login(current_senior)
 end

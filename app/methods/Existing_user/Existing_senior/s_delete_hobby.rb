@@ -13,4 +13,6 @@ def s_delete_hobby(current_senior)
 
     delete_new_hobby = Seniorhobby.destroy(delete_this_hobby.id)
 
+    press_any_key
+    s_existing_user_login(current_senior)
 end
